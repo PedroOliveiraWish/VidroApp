@@ -1,0 +1,50 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    /* ==============================
+       File Layout
+    ============================== */
+    "rootDir": "./src",             // pasta com os arquivos .ts/.tsx
+    "outDir": "./dist",             // saída do build
+
+    /* ==============================
+       Environment Settings
+    ============================== */
+    "module": "NodeNext",           // suporte ESM no Node.js
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",             // gerar JS moderno
+    "lib": ["ESNext", "DOM"],       // inclui API do browser + ESNext
+    "types": ["node"],              // habilita types do Node.js
+
+    /* ==============================
+       Other Outputs
+    ============================== */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* ==============================
+       Stricter Typechecking Options
+    ============================== */
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ==============================
+       Recommended Options
+    ============================== */
+    "strict": true,
+    "jsx": "react-jsx",             // suporte a React 17+
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    /* ==============================
+       Nice to Have
+    ============================== */
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,        // facilita importações do Node
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],               // compila apenas ./src
+  "exclude": ["node_modules", "dist"]
+}
